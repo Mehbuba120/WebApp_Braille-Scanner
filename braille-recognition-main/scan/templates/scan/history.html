@@ -1,0 +1,30 @@
+{% extends 'main.html' %}
+
+{% block title %}
+History - {{ user.username }}
+{% endblock %}
+
+{% block content %}
+
+<br><br>
+ <h2 class="fw-bold h-font text-center" style= " text-align: center; color:  rgb(133, 14, 127); font-size: 50px; font-family: 'Times New Roman', Times, serif, cursive;margin-bottom: 0;margin-top: 0;">History</h2>
+<br><br>
+ <div style=" margin: auto; width: 85%; border: 3px solid rgb(117, 6, 99); padding: 10px;">
+
+
+
+    {% if request.user.is_authenticated and request.user == user %}
+        {% for items in history %}
+            <div class="text-center mt-2" style="margin-left: 500px; margin-right: 500px;">
+            <img src="{{ items.image.url }}" height="800px" width="900px" class="img-thumbnail" alt="...">
+            <p class="font-md text-slate-500"> '{{ items.caption }}'</p>
+            </div>
+            <br><br>
+               
+        {% endfor %}
+    {% endif %}
+    
+</div>
+
+<br><br><br>
+{% endblock %}
