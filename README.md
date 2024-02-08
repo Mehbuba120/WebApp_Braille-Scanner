@@ -1,1 +1,1 @@
-An Web Application for converting Braille contents to Text
+An Web Application for Braille-To-Text-Conversion
