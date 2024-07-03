@@ -1,1 +1,2 @@
-An Web Application for Braille-To-Text-Conversion
+A web app for transforming braille image into normal text for English alphabets, Bangla alphabets and numbers.
+
